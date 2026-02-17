@@ -67,7 +67,7 @@ sequence1 :: Stream Int
 sequence1 = unfold (\ !n -> Tup2 n . (`rem` period0) $ exp0 * n) 1
 
 period1 :: Int
-period1 = modPowEventualPeriod period0 exp0
+period1 = modPowEventualPeriod period0 exp0 -- implicitly assume 'sequence1' stabilizes into its eventual cycle within @'exp1' ^ 'exp2'@ entries
 
 sequence2 :: Stream Int
 sequence2 = unfold (\ !n -> Tup2 n . (`rem` period1) $ exp1 * n) 1
