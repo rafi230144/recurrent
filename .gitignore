@@ -1,0 +1,11 @@
+.DS_Store
+.localized
+
+*.hi
+*.o
+
+*.css
+*.html
+*.js
+*.json
+*.png
